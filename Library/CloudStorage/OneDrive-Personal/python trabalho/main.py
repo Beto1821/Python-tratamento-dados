@@ -13,8 +13,7 @@ new_sheet.title = "Dados Processados"
 # Criar cabeçalhos na nova planilha
 new_sheet.append(["Itens", "Descrição Detalhada", "Quantidade Total", "Valor Unitário", "Unidade de Fornecimento"])
 
-# Iterar pelas linhas ímpares e pares da planilha original
-for i in range(1, sheet.max_row + 1, 2):  # Processar apenas linhas ímpares
+for i in range(1, sheet.max_row + 1, 3): 
     item_number = sheet.cell(row=i, column=1).value  # Número do item
     descricao_detalhada = None  # Inicializar como None
     quantidade_total = valor_unitario = unidade_fornecimento = None  # Inicializar valores padrão
